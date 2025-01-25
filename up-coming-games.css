@@ -1,0 +1,321 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial;
+}
+
+/*  the navigation bar*/
+
+header {
+    display: flex;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 35px;
+    justify-content: center;
+    
+    
+}
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 150px;
+    height: 100px;
+    margin-right: 10px;
+    margin-top: 0;
+
+}
+
+.logo h1 {
+    font-size: 30px;
+    width: 200px;
+    margin-right: 150px;
+    
+}
+.logo h1 a {
+    text-decoration: none;
+    color: white;
+}
+
+
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    border: 1px solid #000000;
+    padding: 12px;
+    font-size: 18px;
+
+}   
+
+.nav ul li {
+    margin: 0;
+    padding: 0  ;
+    margin-right: 60px;
+    font-family: arial;
+}
+
+.nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+    
+}
+
+.nav ul li a:hover {
+    color: #00bcd4;
+}
+.nav ul li a:active{
+    opacity: 0.5;
+}
+/*Description*/
+.description{
+    background-color: #797474;
+    padding: 30px;
+    margin-bottom: 50px ;
+}
+.description h1{
+    text-align: center;
+
+}
+.description p{
+    width: 1800px;
+    margin-left: 1.5cm;
+    
+}
+
+/*gamecard section*/
+
+.gamecards {
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    margin: 50px;
+}
+
+.gamecard {
+    text-align: center;
+}
+
+.image-container {
+    position: relative;
+    width: 400px;
+    height: 300px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.image-container img {
+    width: 400px;
+    height: 300px;
+    transition: transform 0.3s ease;
+    border-radius: 5px;
+}
+
+.image-container:hover img {
+    transform: scale(1.1);
+    opacity: 0.9;
+}
+
+
+.middle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 130px;
+    margin: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 0.3s ;
+    width: 150px;
+}
+.game-name {
+    font-size: 18px;
+    font-weight: bold
+}
+
+.image-container:hover .middle {
+    opacity: 1;
+}
+
+.text {
+    color: #ffffff;
+    font-size: 18px;
+    text-align: center;
+}
+
+.gamecard p {
+    text-decoration: none;
+}
+
+
+
+
+/*footer*/
+.footer {
+    background-color: #383636;
+    color: #fff;
+    padding: 20px 0;
+    font-size: 14px;
+    margin-top: 40px;
+    position: relative;
+    
+}
+
+
+.footer-content {
+    display: flex;
+    margin-left: 100px ;
+    gap: 250px;
+    padding: 10px;
+    font-family: Arial;
+    justify-content: center;
+}
+
+.footer-section {
+    margin: 10px;
+
+}
+
+.footer-section p{
+    max-width: 600px;
+    height: auto;
+}
+.footer-section a {
+    color: #bbb;
+    text-decoration: none;
+    margin: 5px ;
+}
+
+.footer-section a:hover {
+    color: #fff;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin: 5px 0;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px ;
+    border-top: 1px solid #444;
+}
+.up-arrow {
+    position: absolute;
+    top: 50px;
+    right:50px;
+}
+.up-arrow  a{
+    font-size: 30px    ;
+    text-decoration: none;
+    color: #ffffff;
+}
+.up-arrow a:hover{
+    opacity: 0.7;
+}
+
+@media (max-width: 800px){
+    /* Header */
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .logo {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo img {
+        width: 120px;
+        height: auto;
+        margin: 0 auto 10px auto;
+    }
+
+    .logo h1 {
+        font-size: 24px;
+        margin: 0;
+    }
+
+    .nav ul {
+        
+        align-items: center;
+        gap: 15px;
+        padding: 0;
+        border: 1px solid black;
+    }
+
+    .nav ul li {
+        margin: 5px ;
+        
+    }
+
+    .nav ul li a {
+        font-size: 10px;
+        
+    }
+
+    .description p {
+        width: 90%;
+        margin: 0;
+        
+    }
+    .gamecards{
+        flex-direction: column;
+        margin: 0;
+
+    }
+    .image-container img {
+        width: 80%;
+        height: 80%;
+    }
+    .middle {
+        width: 20%;
+        left: 30px;
+    }
+    .text {
+        font-size: 10px;
+        padding: 0;
+        margin: 0;
+    }
+/* Footer */
+.footer-content {
+    flex-direction: column;
+    text-align: left;
+    gap: 15px;
+    margin-left: 0;
+}
+
+.footer-section {
+    margin: 10px ;
+}
+
+
+
+.footer-bottom {
+    margin-top: 10px;
+}
+
+.up-arrow {
+   top: 10px;
+   right: 10px;
+    
+    
+}
+}
+
+
+

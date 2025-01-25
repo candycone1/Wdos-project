@@ -1,0 +1,323 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial;
+    
+}
+
+/*  the navigation bar*/
+
+header {
+    display: flex;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 35px;
+    justify-content: center;
+    
+    
+}
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 150px;
+    height: 100px;
+    margin-right: 10px;
+    margin-top: 0;
+
+}
+
+.logo h1 {
+    font-size: 30px;
+    width: 200px;
+    margin-right: 150px;
+    
+}
+.logo h1 a {
+    text-decoration: none;
+    color: white;
+}
+
+
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    border: 1px solid #000000;
+    padding: 12px;
+    font-size: 18px;
+
+}   
+
+.nav ul li {
+    margin: 0;
+    padding: 0  ;
+    margin-right: 60px;
+    font-family: arial;
+}
+
+.nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+    
+}
+
+.nav ul li a:hover {
+    color: #00bcd4;
+}
+.nav ul li a:active{
+    opacity: 0.5;
+}
+
+
+
+
+/* MAIN BODY */
+
+
+
+.image-container {
+    position: relative;
+    height: auto;
+}
+.image-container img { 
+    width: 1904px;
+    height: auto;
+    margin-top: 20px;
+}
+
+
+/* Text over the Main image */
+.text-overlay { 
+    position: absolute;
+    top: 50%;
+    left: 8%;
+    font-size: 50px;
+    width: 300px;
+}
+
+
+.gift-cards-container{
+    display: flex;
+    justify-content: space-around;
+    
+    
+}
+
+
+.gift-card img {   /*Gift card section */
+    width: 400px;
+    height: 300px;
+    transition: transform 0.3s ease; 
+    margin: 20px;
+    
+    
+}   
+
+
+
+
+.text { /* The text label under the gift card */
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.gift-card img:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+    
+}
+
+
+
+
+
+
+
+
+/*footer*/
+
+
+
+
+
+.footer {
+    background-color: #383636;
+    color: #fff;
+    padding: 20px 0;
+    font-size: 14px;
+    margin-top: 40px;
+    position: relative;
+    
+}
+
+
+.footer-content {
+    display: flex;
+    margin-left: 100px ;
+    gap: 250px;
+    padding: 10px;
+    font-family: Arial;
+    justify-content: center;
+}
+
+.footer-section {
+    margin: 10px;
+
+}
+
+.footer-section p{
+    max-width: 600px;
+    height: auto;
+}
+.footer-section a {
+    color: #bbb;
+    text-decoration: none;
+    margin: 5px ;
+}
+
+.footer-section a:hover {
+    color: #fff;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin: 5px 0;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px ;
+    border-top: 1px solid #444;
+}
+.up-arrow {
+    position: absolute;
+    top: 50px;
+    right:50px;
+}
+.up-arrow  a{
+    font-size: 30px    ;
+    text-decoration: none;
+    color: #ffffff;
+}
+.up-arrow a:hover{
+    opacity: 0.7;
+}
+
+
+/*Mobile Responsive Styles */
+@media (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+    /* Header */
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .logo {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo img {
+        width: 120px;
+        height: auto;
+        margin: 0 auto 10px auto;
+    }
+
+    .logo h1 {
+        font-size: 24px;
+        margin: 0;
+    }
+
+    .nav ul {
+        
+        align-items: center;
+        gap: 15px;
+        padding: 0;
+        border: 1px solid black;
+    }
+
+    .nav ul li {
+        margin: 5px ;
+        
+    }
+
+    .nav ul li a {
+        font-size: 10px;
+        
+    }
+
+/* MAIN BODY */
+
+
+
+    .image-container img {
+        width: 100%;
+        height: 400px;
+        margin: 0;
+    }
+
+    /* Text over the Main image */
+.text-overlay { 
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    font-size: 20px;
+    width: 200px;
+
+}
+
+.gift-cards-container{
+    flex-direction: column;
+
+}
+
+
+.gift-card img {
+    width: 80%;
+    margin-left: 63px;
+}
+
+
+   /* Footer */
+   .footer-content {
+    flex-direction: column;
+    text-align: left;
+    gap: 15px;
+    margin-left: 0;
+}
+
+.footer-section {
+    margin: 10px ;
+}
+
+
+
+.footer-bottom {
+    margin-top: 10px;
+}
+
+.up-arrow {
+   top: 10px;
+   right: 10px;
+    
+    
+}
+
+}
