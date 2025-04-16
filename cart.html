@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - City Games</title>
+    <link rel="stylesheet" href="cart.css">
+    
+</head>
+<body>
+    <div class="cart-container">
+        <h1>Cart</h1>
+        <table id="cartTable">
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Unit Price</th>
+                    <th>Quantity</th>
+                    <th>Subtotal</th>
+                </tr>
+            </thead>
+            <tbody id="cartItems"></tbody>
+        </table>
+        <div class="total">Total: Rs. <span id="totalPrice">0.00</span></div>
+        <div class="button-group">
+            <button class="btn btn-checkout" id="checkoutBtn">Proceed to Checkout</button>
+            <button class="btn btn-fav" id="saveFavBtn">Add to Favourites</button>
+            <button class="btn btn-apply" id="applyFavBtn">Apply Favourites</button>
+            <button class="btn btn-clear" id="clearCartBtn">Clear Cart</button>
+        </div>
+    </div>
+    <script src="/cart.js"></script>
+    </body>
+</html>
