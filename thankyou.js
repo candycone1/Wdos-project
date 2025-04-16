@@ -1,12 +1,13 @@
-document.addEventListener("DOMContentLoaded", function () {
-    let deliveryDate = new Date();
-    deliveryDate.setDate(deliveryDate.getDate() + 5);
+document.addEventListener("DOMContentLoaded",getname)
 
-    let formattedDate = deliveryDate.toLocaleDateString("en-US", {
-        year: "numeric",
-        month: "long",
-        day: "numeric"
-    });
+    function getname(){
+        const name = localStorage.getItem("username");
+        const date = localStorage.getItem("deliveryDate");
 
-    document.getElementById("deliveryDate").textContent = formattedDate;
-});
+
+        if (name && date ){
+            document.getElementById("username").textContent= name;
+            document.getElementById("deliveryDate").textContent=date;
+        }
+    }
+

@@ -1,0 +1,29 @@
+
+        body {
+            font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
+            background-color: #f0f4f8;
+            padding: 50px;
+            text-align: center;
+        }
+        .thank-you-box {
+            background: white;
+            max-width: 600px;
+            margin: auto;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #000000;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 1.2rem;
+            color: #333;
+        }
+
+        .van img{
+            width: 100px;
+            height: 100px;
+            
+        }

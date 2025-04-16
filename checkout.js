@@ -2,8 +2,19 @@
 document.addEventListener("DOMContentLoaded", function () {
   showOrderSummary();
   setupCheckoutForm();
+  goback()
 });
+function goback(){
+  const backbtn = document.getElementById("backbtn")
+  if (backbtn){
+    backbtn.addEventListener("click", function()
+    {
+      window.location.href="cart.html";
 
+    })
+    
+  }
+}
 function showOrderSummary() {
   const order = JSON.parse(localStorage.getItem("currentOrder")) || [];
   const tbody = document.querySelector("#orderTable tbody");
@@ -30,28 +41,30 @@ function showOrderSummary() {
 }
 
 function setupCheckoutForm() {
-  document.getElementById("checkoutForm").addEventListener("submit", handlePayment);
+  const btn1 = document.getElementById("btn1");
+  if (btn1) {
+    btn1.addEventListener("click", handlePayment);
+  }
 }
 
 function handlePayment(event) {
   event.preventDefault();
-
+  
   const name = document.getElementById("name").value;
-  const email = document.getElementById("email").value;
-  const address = document.getElementById("address").value;
-  const city = document.getElementById("city").value;
-  const card = document.getElementById("card").value;
-  const expiry = document.getElementById("expiry").value;
 
-  if (name && email && address && city && card && expiry) {
+  if (name) {
+    
     const deliveryDate = new Date();
     deliveryDate.setDate(deliveryDate.getDate() + 5);
     const formattedDate = deliveryDate.toDateString();
-
-    localStorage.removeItem("currentOrder");
-    const url = `thankyou.html?name=${encodeURIComponent(name)}&delivery=${encodeURIComponent(formattedDate)}`;
-    window.location.href = url;
-  } else {
-    alert("Please fill in all fields.");
+   
+    localStorage.setItem("username", name);      
+    localStorage.setItem("deliveryDate", formattedDate); 
+    checkout()
+    
+  } 
+    
   }
-}
+  function checkout(){
+  window.location.href ="thankyou.html";
+  }
