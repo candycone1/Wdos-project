@@ -1,18 +1,20 @@
 body{
     margin: 0;
     padding: 0;
-    font-family: Arial;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color:rgb(2, 7, 24) ;
+ 
+    
 }
 
 /*  the navigation bar*/
 
 header {
     display: flex;
-    align-items: center;
-    background-color: #333;
+    
+    background-color: rgb(3, 9, 32);
     color: white;
-    padding: 35px;
-    justify-content: center;
+    justify-content: space-between;
     
     
 }
@@ -22,15 +24,18 @@ header {
 }
 
 .logo img {
-    width: 150px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     margin-right: 10px;
     margin-top: 0;
+    margin-left: 30px;
+
 
 }
 
+
 .logo h1 {
-    font-size: 30px;
+    font-size: 20px;
     width: 200px;
     margin-right: 150px;
 }
@@ -45,7 +50,6 @@ header {
     list-style: none;
     display: flex;
     gap: 10px;
-    border: 1px solid #000000;
     padding: 12px;
     font-size: 18px;
 
@@ -72,27 +76,31 @@ header {
 .nav ul li a:active{
     opacity: 0.5;
 }
+
  /*  The Banner*/
 .main-image{
     position:absolute;
-    left: 0;
-    
+    padding: 0;
+    margin: auto;
+    left: 0;    
     
 
 
 }
 .main-image img{
     width: 1900px;
-    height: 700px;
+    height: 900px;
+    
     
    
 }
 .main-banner {
     display: flex;
     align-items: center;
-    height: 700px;
+    height: 900px;
     border: none;
     padding-left:50px ;
+    
      
     
 }

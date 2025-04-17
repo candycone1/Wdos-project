@@ -8,6 +8,7 @@ body {
     padding: 30px;
     border-radius:16px;
     
+    
 }
 h1 {
     text-align: center;
@@ -38,8 +39,9 @@ input[type="number"] {
     margin: 20px ;
 }
 .button-group {
-    display: block;
+    display: flex;
     gap: 10px;
+   
     
 }
 .btn {
@@ -52,8 +54,8 @@ input[type="number"] {
     
 }
 .btn-checkout {
-     background-color: rgb(12, 32, 100);
-      color: white; 
+     background-color: rgb(255, 255, 255);
+      color: rgb(0, 0, 0); 
     }
 .btn-checkout:hover {
      opacity: 0.7;
@@ -66,15 +68,15 @@ input[type="number"] {
      background-color: #c82333;
      }
 .btn-fav {
-     background-color: #007bff;
-      color: white;
+     background-color: #eeff00; 
+      color: rgb(0, 0, 0);
      }
 .btn-fav:hover {
-    background-color: #0056b3; 
+    background-color: #8a9128; 
 }
 .btn-apply { 
-    background-color: rgb(33, 52, 114); 
-    color: rgb(255, 255, 255);
+    background-color: rgb(86, 125, 255); 
+    color: rgb(0, 0, 0);
  }
 .btn-apply:hover 
 { 
@@ -102,8 +104,12 @@ input[type="number"] {
     transition: 0.4s ease-in-out; 
 }
 
+.btns{
+    display: flex;
+    justify-content: space-between;
+    
 
-
+}
 /*------------------------------------------*/
 /*Mobile Responsive Styles */
 
@@ -129,6 +135,13 @@ input[type="number"] {
         
  
     }    
+    .btns{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        
+    
+    }
 }
 
 
