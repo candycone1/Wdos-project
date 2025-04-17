@@ -2,7 +2,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   showOrderSummary();
   setupCheckoutForm();
-  goback()
+  goback();
 });
 function goback(){
   const backbtn = document.getElementById("backbtn")
@@ -51,20 +51,34 @@ function handlePayment(event) {
   event.preventDefault();
   
   const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const address = document.getElementById("address").value;
+  const city = document.getElementById("city").value;
+  const card = document.getElementById("card").value;
+  const expiry = document.getElementById("expiry").value;
+  
 
-  if (name) {
+
+
+  if (name&&email&&address&&city&&card&&expiry) {
     
     const deliveryDate = new Date();
-    deliveryDate.setDate(deliveryDate.getDate() + 5);
+    deliveryDate.setDate(deliveryDate.getDate() + 7);
     const formattedDate = deliveryDate.toDateString();
    
     localStorage.setItem("username", name);      
     localStorage.setItem("deliveryDate", formattedDate); 
-    checkout()
     
-  } 
+    
+    window.location.href ="thankyou.html";
+    clearcart();
+  } else {
+    alert ("Please fill the above form complete")
     
   }
-  function checkout(){
-  window.location.href ="thankyou.html";
+    
+  }
+  function clearcart(){
+    localStorage.removeItem("cart");
+  
   }

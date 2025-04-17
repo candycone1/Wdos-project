@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded",getname)
-
+Gobaack()
     function getname(){
         const name = localStorage.getItem("username");
         const date = localStorage.getItem("deliveryDate");
@@ -11,3 +11,10 @@ document.addEventListener("DOMContentLoaded",getname)
         }
     }
 
+    function Gobaack()
+    {
+        const btn = document.getElementById("Shoppage-btn");
+        btn.addEventListener("click", function (){
+            window.location.href="shop.html";
+        })
+    }

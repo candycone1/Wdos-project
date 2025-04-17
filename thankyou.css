@@ -5,6 +5,9 @@
             padding: 50px;
             text-align: center;
         }
+        h1 {
+            font-family: Brush Script MT ;
+        }
         .thank-you-box {
             background: white;
             max-width: 600px;
@@ -27,3 +30,60 @@
             height: 100px;
             
         }
+        .Shoppage-btn{
+            
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+            padding-block: 0.5rem;
+            padding-inline: 1.25rem;
+            background-color: rgb(0 107 179);
+            border-radius: 9999px;
+            align-items: center;
+            justify-content: center;
+            color: #ffff;
+            gap: 10px;
+            font-weight: bold;
+            border: 3px solid #ffffff4d;
+            outline: none;
+            overflow: hidden;
+            font-size: 15px;
+            cursor: pointer;
+        }
+        .Shoppage-btn:hover{
+
+            transform: scale(1.05);
+            border-color: #fff9;
+            
+        }
+        
+/*Mobile Responsive Styles */
+
+
+
+@media (min-width:0px) and (max-width: 1476px) {
+    body {
+        max-width:1476px;
+        padding: 0;
+    }
+    h1 {
+        font-size: 100px;
+    }
+    p {
+        font-size: 30px;
+        color: #333;
+    }
+
+    .van img{
+        width: 200px;
+        height: 200px;
+        
+    }
+    .thank-you-box {
+        width: 100%;
+        height: 1000px;
+    }
+    .Shoppage-btn{
+        font-size: 30px;
+    }
+   
+}
