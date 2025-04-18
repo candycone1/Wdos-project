@@ -65,8 +65,8 @@ input{
     width: 100%;
     padding: 15px;
     font-size: 1.1em;
-    background-color: #28a745;
-    color: white;
+    background-color: #2EBD4F;
+    color: rgb(0, 0, 0);
     border: none;
     border-radius: 8px;
     cursor: pointer;

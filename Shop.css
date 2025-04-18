@@ -229,7 +229,7 @@ height: 150px;
 .addToCart-btn
 {
     
-    background-color: rgb(255, 0, 0);
+    background-color: #850000;
     border-radius: 20px;
     border: none;
     padding-top: 5px; 
@@ -328,7 +328,10 @@ height: 150px;
     opacity: 0.7;
 }
 
-
+.email{
+    background-color: #FFFFFF;
+    color:#000000 ;
+}
 /*------------------------------------------*/
 /*Mobile Responsive Styles */
 
