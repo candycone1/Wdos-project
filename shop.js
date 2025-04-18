@@ -51,9 +51,9 @@ function handleAddToCart(event) {
   } else {
     cart.push({ name: name, price: price, quantity: 1 });
   }
-
   localStorage.setItem("cart", JSON.stringify(cart));
-  alert(name + " added to cart.");
+
+  showBannerMessage(`${name} added to cart!`);
 }
 
 function handleBuyNow(event) {
@@ -63,4 +63,22 @@ function handleBuyNow(event) {
 
   localStorage.setItem("currentOrder", JSON.stringify(order));
   window.location.href = "checkout.html";
+}
+
+function showBannerMessage(message) {
+  const container = document.getElementById("notificationContainer");
+  const banner = document.createElement("div");
+  banner.className = "notification";
+  banner.textContent = message;
+
+  container.appendChild(banner);
+
+
+  setTimeout(() => {
+    banner.style.opacity = "0";
+    banner.style.transform = "translateY(-10px)";
+
+    
+    setTimeout(() => banner.remove(), 300);
+  }, 2000);
 }
