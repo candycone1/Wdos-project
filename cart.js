@@ -8,21 +8,7 @@ function loadCartPage() {
   setupCartActions();
   goback();
 }
-/*
-function  deleteitem(){
-  let removeItembtn = document.getElementsByClassName("remove-btn")
-  console.log(removeItembtn);
 
-  for (var i = 0 ; i <  removeItembtn.length; i++ )
-  {
-    var btn1 = removeItembtn[i]
-    btn1.addEventListener("click", function(event){
-      let removebtn1 =  event.target
-      removebtn1.parentElement.parentElement.remove()
-    })
-  }
-}
-*/
 
 function goback(){
   const backbtn = document.getElementById("backbtn")

@@ -42,7 +42,7 @@ function setupCartButtons() {
 
 function handleAddToCart(event) {
   const name = event.target.getAttribute("data-name");
-  const price = parseFloat(event.target.getAttribute("data-price").replace(/,/g, ""));
+  const price = parseFloat(event.target.getAttribute("data-price"));
   let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
   const existing = cart.find(item => item.name === name);
@@ -53,7 +53,7 @@ function handleAddToCart(event) {
   }
   localStorage.setItem("cart", JSON.stringify(cart));
 
-  showBannerMessage(`${name} added to cart!`);
+  alert( ` ${name} added to cart `)
 }
 
 function handleBuyNow(event) {
@@ -65,20 +65,4 @@ function handleBuyNow(event) {
   window.location.href = "checkout.html";
 }
 
-function showBannerMessage(message) {
-  const container = document.getElementById("notificationContainer");
-  const banner = document.createElement("div");
-  banner.className = "notification";
-  banner.textContent = message;
 
-  container.appendChild(banner);
-
-
-  setTimeout(() => {
-    banner.style.opacity = "0";
-    banner.style.transform = "translateY(-10px)";
-
-    
-    setTimeout(() => banner.remove(), 300);
-  }, 2000);
-}
